@@ -1,6 +1,6 @@
-/* Paleta de colores premium basada en la referencia del proyecto */
-
-/* Reseteo General */
+/* ==========================================================================
+   ESTILOS GENERALES Y RESETEO
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -8,24 +8,80 @@
 }
 
 body {
-    background-color: #121312; /* Gris oscuro/carbón de la imagen */
-    color: #f4ecd8; /* Variación clara del dorado para lectura óptima */
+    background-color: #121312; /* Gris oscuro de la referencia */
+    color: #f4ecd8; 
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     line-height: 1.8;
-    padding: 40px 20px;
 }
 
-/* Contenedor Principal */
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN (NAV)
+   ========================================================================== */
+.nav-navegacion {
+    background-color: #1a1b1a;
+    border-bottom: 2px solid #a67d43; 
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.nav-lista .titulo {
+    margin-right: auto;
+    color: #ad0013; /* Rojo exacto de tu imagen */
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+
+.logo-titulo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #a67d43; /* Dorado exacto de tu imagen */
+}
+
+.nav-link {
+    color: #f4ecd8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ad0013; 
+}
+
+/* ==========================================================================
+   SECCIÓN SOBRE NOSOTROS
+   ========================================================================== */
 .about-section {
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 50px auto;
     padding: 50px 40px;
-    background-color: #1a1b1a; /* Contraste sutil */
-    border: 2px solid #a67d43; /* Dorado exacto de la referencia */
+    background-color: #1a1b1a; 
+    border: 2px solid #a67d43; 
     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
-/* Encabezado */
 .about-header {
     text-align: center;
     margin-bottom: 60px;
@@ -39,23 +95,21 @@ body {
 }
 
 .about-header h1 {
-    color: #ad0013; /* Rojo exacto de la referencia */
+    color: #ad0013; 
     font-size: 3rem;
     font-weight: normal;
     letter-spacing: 4px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .about-header .subtitle {
-    color: #a67d43; /* Dorado exacto de la referencia */
+    color: #a67d43; 
     font-size: 1.2rem;
     font-style: italic;
     letter-spacing: 2px;
 }
 
-/* Estructura de la Historia (Flexbox) */
 .about-content {
     display: flex;
     align-items: center;
@@ -78,7 +132,6 @@ body {
     color: #a67d43;
 }
 
-/* Letra capital clásica al inicio del texto */
 .about-text p:first-of-type::first-letter {
     font-size: 4rem;
     float: left;
@@ -102,7 +155,6 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-/* Divisor Intermedio */
 .divider {
     text-align: center;
     margin: 50px 0;
@@ -111,7 +163,6 @@ body {
     letter-spacing: 8px;
 }
 
-/* Bloque de Valores (Grid de 3 columnas) */
 .about-values {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -141,8 +192,49 @@ body {
     font-style: italic;
 }
 
-/* Diseño Adaptable (Responsive para Móviles) */
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
+.footer-navegacion {
+    background-color: #1a1b1a;
+    border-top: 2px solid #a67d43; 
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-telefono {
+    color: #a67d43;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.footer-copyright {
+    color: #8c8573;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE (CELULAR)
+   ========================================================================== */
 @media (max-width: 768px) {
+    .nav-lista {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .nav-lista .titulo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
     .about-content {
         flex-direction: column-reverse;
         gap: 30px;
