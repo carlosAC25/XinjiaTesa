@@ -1,0 +1,156 @@
+/* Paleta de colores premium basada en la referencia del proyecto */
+
+/* Reseteo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121312; /* Gris oscuro/carbón de la imagen */
+    color: #f4ecd8; /* Variación clara del dorado para lectura óptima */
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    line-height: 1.8;
+    padding: 40px 20px;
+}
+
+/* Contenedor Principal */
+.about-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 50px 40px;
+    background-color: #1a1b1a; /* Contraste sutil */
+    border: 2px solid #a67d43; /* Dorado exacto de la referencia */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* Encabezado */
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.brand-logo {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.about-header h1 {
+    color: #ad0013; /* Rojo exacto de la referencia */
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.about-header .subtitle {
+    color: #a67d43; /* Dorado exacto de la referencia */
+    font-size: 1.2rem;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+/* Estructura de la Historia (Flexbox) */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    flex: 1.2;
+}
+
+.about-text p {
+    margin-bottom: 22px;
+    font-size: 1.15rem;
+    text-align: justify;
+    color: #e3dec9;
+}
+
+.about-text strong {
+    color: #a67d43;
+}
+
+/* Letra capital clásica al inicio del texto */
+.about-text p:first-of-type::first-letter {
+    font-size: 4rem;
+    float: left;
+    color: #ad0013;
+    line-height: 1;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.about-image {
+    flex: 0.8;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #a67d43;
+    padding: 8px;
+    background: #121312;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Divisor Intermedio */
+.divider {
+    text-align: center;
+    margin: 50px 0;
+    color: #ad0013;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+}
+
+/* Bloque de Valores (Grid de 3 columnas) */
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.value-card {
+    text-align: center;
+    padding: 25px;
+    background: #121312;
+    border-top: 3px solid #ad0013;
+    border-bottom: 1px solid #a67d43;
+}
+
+.value-card h3 {
+    color: #a67d43;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.value-card p {
+    font-size: 1.05rem;
+    color: #bfae93;
+    font-style: italic;
+}
+
+/* Diseño Adaptable (Responsive para Móviles) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .about-section {
+        padding: 30px 20px;
+    }
+    .about-header h1 {
+        font-size: 2.3rem;
+    }
+}
